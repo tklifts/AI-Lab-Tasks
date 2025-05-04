@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premier League Predictor</title>
+</head>
+<body>
+    <h1>Premier League Match Predictor</h1>
+    <form method="POST">
+        <label>Home Team:</label><br>
+        <input name="home_team"><br>
+        <label>Away Team:</label><br>
+        <input name="away_team"><br>
+        <label>Home Score:</label><br>
+        <input name="home_score" type="number"><br>
+        <label>Home XG:</label><br>
+        <input name="home_xg" type="number"><br>
+        <label>Away Score:</label><br>
+        <input name="away_score" type="number"><br>
+        <label>Away XG:</label><br>
+        <input name="away_xg" type="number"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Predicted Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
